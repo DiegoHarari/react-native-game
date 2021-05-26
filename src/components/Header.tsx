@@ -1,0 +1,30 @@
+import React from 'react';
+import {View, Text, StyleSheet} from 'react-native';
+import Colors from '../../Constants/Colors';
+
+interface Props {
+  title: string;
+}
+
+const Header: React.FC<Props> = ({title}) => (
+  <View style={styles.header}>
+    <Text style={styles.headerTitle}>{title}</Text>
+  </View>
+);
+
+export default Header;
+
+const styles = StyleSheet.create({
+  header: {
+    width: '100%',
+    height: 90,
+    paddingTop: 35,
+    backgroundColor: Colors.primary,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headerTitle: {
+    color: 'black',
+    fontSize: 18,
+  },
+});
